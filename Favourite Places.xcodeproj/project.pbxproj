@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C64E2551FEFF6200093F0B2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C64E2541FEFF6200093F0B2 /* CoreData.framework */; };
+		3C64E2591FEFF9980093F0B2 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C64E2561FEFF65B0093F0B2 /* Database.xcdatamodeld */; };
 		3C847A361FED971200A7BF29 /* PlacesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A351FED971200A7BF29 /* PlacesCollectionViewController.swift */; };
-		3C847A391FED9A5800A7BF29 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A381FED9A5800A7BF29 /* Place.swift */; };
+		3C847A391FED9A5800A7BF29 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A381FED9A5800A7BF29 /* PlaceModel.swift */; };
 		3C847A3C1FEE837300A7BF29 /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A3B1FEE837300A7BF29 /* PlacesCollectionViewCell.swift */; };
 		3C847A3E1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A3D1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift */; };
 		3C847A411FEEE7E000A7BF29 /* RoundedUIViewFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A401FEEE7E000A7BF29 /* RoundedUIViewFrames.swift */; };
@@ -20,8 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C64E2541FEFF6200093F0B2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3C64E2571FEFF65B0093F0B2 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		3C847A351FED971200A7BF29 /* PlacesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewController.swift; sourceTree = "<group>"; };
-		3C847A381FED9A5800A7BF29 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3C847A381FED9A5800A7BF29 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		3C847A3B1FEE837300A7BF29 /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3C847A3D1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceViewController.swift; sourceTree = "<group>"; };
 		3C847A401FEEE7E000A7BF29 /* RoundedUIViewFrames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIViewFrames.swift; sourceTree = "<group>"; };
@@ -39,12 +43,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C64E2551FEFF6200093F0B2 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C64E2531FEFF6200093F0B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C64E2541FEFF6200093F0B2 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C847A341FED944900A7BF29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +71,7 @@
 		3C847A371FED9A3A00A7BF29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3C847A381FED9A5800A7BF29 /* Place.swift */,
+				3C847A381FED9A5800A7BF29 /* PlaceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,6 +97,7 @@
 			children = (
 				FAD43E181FEBDC940098269A /* Favourite Places */,
 				FAD43E171FEBDC940098269A /* Products */,
+				3C64E2531FEFF6200093F0B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +121,7 @@
 				FAD43E201FEBDC940098269A /* Assets.xcassets */,
 				FAD43E221FEBDC940098269A /* LaunchScreen.storyboard */,
 				FAD43E251FEBDC940098269A /* Info.plist */,
+				3C64E2561FEFF65B0093F0B2 /* Database.xcdatamodeld */,
 			);
 			path = "Favourite Places";
 			sourceTree = "<group>";
@@ -185,7 +200,8 @@
 			files = (
 				3C847A411FEEE7E000A7BF29 /* RoundedUIViewFrames.swift in Sources */,
 				3C847A3C1FEE837300A7BF29 /* PlacesCollectionViewCell.swift in Sources */,
-				3C847A391FED9A5800A7BF29 /* Place.swift in Sources */,
+				3C64E2591FEFF9980093F0B2 /* Database.xcdatamodeld in Sources */,
+				3C847A391FED9A5800A7BF29 /* PlaceModel.swift in Sources */,
 				3C847A431FEEFF1600A7BF29 /* PlaceViewController.swift in Sources */,
 				3C847A361FED971200A7BF29 /* PlacesCollectionViewController.swift in Sources */,
 				3C847A3E1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift in Sources */,
@@ -376,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C64E2561FEFF65B0093F0B2 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C64E2571FEFF65B0093F0B2 /* Database.xcdatamodel */,
+			);
+			currentVersion = 3C64E2571FEFF65B0093F0B2 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FAD43E0E1FEBDC940098269A /* Project object */;
 }

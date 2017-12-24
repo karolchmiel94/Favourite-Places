@@ -7,22 +7,42 @@
 //
 
 import UIKit
+import CoreData
 
 private let reuseIdentifier = "Cell"
 
 class PlacesCollectionViewController: UICollectionViewController {
     
+    @IBOutlet var placesCollectionView: UICollectionView!
     fileprivate let reuseIdentifier = "PlaceCell"
     fileprivate var itemsPerRow: CGFloat = 2
     fileprivate let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 50.0, right: 20.0)
-    var placesList = [Place]()
-
+    var placesList = [PlaceModel]()
+    var places: [NSManagedObject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if UIDevice.current.userInterfaceIdiom == .pad {
             itemsPerRow += 1
         }
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Place")
+        do {
+            places = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        placesCollectionView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +68,7 @@ class PlacesCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return places.count
     }
     
     
@@ -56,8 +76,12 @@ class PlacesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PlacesCollectionViewCell
     
-        cell.placeTitleLabel.text = "Awesome place dude!"
+//        cell.placeTitleLabel.text = "Awesome place dude!"
     
+        let place = places[indexPath.row]
+        cell.placeTitleLabel.text = place.value(forKeyPath: "title") as? String
+        cell.placeImageView.image = UIImage(data: place.value(forKeyPath: "image") as! Data)
+        
         return cell
     }
 
@@ -76,12 +100,24 @@ class PlacesCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data = places[indexPath.row]
+        let place = PlaceModel.init(with: data.value(forKeyPath: "title") as! String, data.value(forKeyPath: "image") as! Data, and: data.value(forKeyPath: "desc") as! String)
+        let placeVC = storyboard?.instantiateViewController(withIdentifier: "PlaceVC") as! PlaceViewController
+        
+        placeVC.place = place
+        
+        navigationController?.present(placeVC, animated: true, completion: nil) //.pushViewController(placeVC, animated: true)
+
+//        performSegue(withIdentifier: "presentPlace", sender: nil)
+    }
+ 
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

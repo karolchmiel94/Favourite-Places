@@ -8,15 +8,21 @@
 
 import UIKit
 
-class Place {
+class PlaceModel {
 
     var title: String
-    var image: UIImage
+    var image: Data
     var description: String
+    
+    init() {
+        title = ""
+        image = Data()
+        description = ""
+    }
 
-    init(with title: String, and description: String) {
+    init(with title: String, _ photo: Data, and description: String) {
         self.title = title
-        self.image = UIImage.init()
+        self.image = photo
         self.description = description
     }
 }
