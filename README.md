@@ -13,7 +13,9 @@ Days of your struggle are over! Here comes amazing app for saving every and each
 4. Implement editing of items.
 
 **Extra features:**
+
 **1.  Saving data permanently.** DONE
+
 **2. Add possibility to set location of each place.**
 
 ---
