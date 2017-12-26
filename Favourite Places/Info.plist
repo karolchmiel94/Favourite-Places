@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Would you like to have possibility to add photos from phone library?</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Would you like to have possibility to take photo and use it in app?</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Let me add those photos of you from your phone library.</string>
 </dict>
 </plist>

@@ -7,17 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C64E2551FEFF6200093F0B2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C64E2541FEFF6200093F0B2 /* CoreData.framework */; };
+		3C64E2591FEFF9980093F0B2 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C64E2561FEFF65B0093F0B2 /* Database.xcdatamodeld */; };
+		3C847A361FED971200A7BF29 /* PlacesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A351FED971200A7BF29 /* PlacesCollectionViewController.swift */; };
+		3C847A391FED9A5800A7BF29 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A381FED9A5800A7BF29 /* PlaceModel.swift */; };
+		3C847A3C1FEE837300A7BF29 /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A3B1FEE837300A7BF29 /* PlacesCollectionViewCell.swift */; };
+		3C847A3E1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A3D1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift */; };
+		3C847A411FEEE7E000A7BF29 /* RoundedUIViewFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A401FEEE7E000A7BF29 /* RoundedUIViewFrames.swift */; };
+		3C847A431FEEFF1600A7BF29 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C847A421FEEFF1600A7BF29 /* PlaceViewController.swift */; };
 		FAD43E1A1FEBDC940098269A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD43E191FEBDC940098269A /* AppDelegate.swift */; };
-		FAD43E1C1FEBDC940098269A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD43E1B1FEBDC940098269A /* ViewController.swift */; };
 		FAD43E1F1FEBDC940098269A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD43E1D1FEBDC940098269A /* Main.storyboard */; };
 		FAD43E211FEBDC940098269A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD43E201FEBDC940098269A /* Assets.xcassets */; };
 		FAD43E241FEBDC940098269A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD43E221FEBDC940098269A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C64E2541FEFF6200093F0B2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3C64E2571FEFF65B0093F0B2 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		3C847A351FED971200A7BF29 /* PlacesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewController.swift; sourceTree = "<group>"; };
+		3C847A381FED9A5800A7BF29 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		3C847A3B1FEE837300A7BF29 /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
+		3C847A3D1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceViewController.swift; sourceTree = "<group>"; };
+		3C847A401FEEE7E000A7BF29 /* RoundedUIViewFrames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIViewFrames.swift; sourceTree = "<group>"; };
+		3C847A421FEEFF1600A7BF29 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		FAD43E161FEBDC940098269A /* Favourite Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favourite Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD43E191FEBDC940098269A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAD43E1B1FEBDC940098269A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAD43E1E1FEBDC940098269A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAD43E201FEBDC940098269A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD43E231FEBDC940098269A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,17 +43,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C64E2551FEFF6200093F0B2 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C64E2531FEFF6200093F0B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C64E2541FEFF6200093F0B2 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C847A341FED944900A7BF29 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C847A351FED971200A7BF29 /* PlacesCollectionViewController.swift */,
+				3C847A421FEEFF1600A7BF29 /* PlaceViewController.swift */,
+				3C847A3D1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3C847A371FED9A3A00A7BF29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C847A381FED9A5800A7BF29 /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3C847A3A1FEE834700A7BF29 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C847A3B1FEE837300A7BF29 /* PlacesCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3C847A3F1FEEE76900A7BF29 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3C847A401FEEE7E000A7BF29 /* RoundedUIViewFrames.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		FAD43E0D1FEBDC940098269A = {
 			isa = PBXGroup;
 			children = (
 				FAD43E181FEBDC940098269A /* Favourite Places */,
 				FAD43E171FEBDC940098269A /* Products */,
+				3C64E2531FEFF6200093F0B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +113,15 @@
 			isa = PBXGroup;
 			children = (
 				FAD43E191FEBDC940098269A /* AppDelegate.swift */,
-				FAD43E1B1FEBDC940098269A /* ViewController.swift */,
+				3C847A3F1FEEE76900A7BF29 /* Utilities */,
+				3C847A3A1FEE834700A7BF29 /* Views */,
+				3C847A371FED9A3A00A7BF29 /* Models */,
+				3C847A341FED944900A7BF29 /* ViewControllers */,
 				FAD43E1D1FEBDC940098269A /* Main.storyboard */,
 				FAD43E201FEBDC940098269A /* Assets.xcassets */,
 				FAD43E221FEBDC940098269A /* LaunchScreen.storyboard */,
 				FAD43E251FEBDC940098269A /* Info.plist */,
+				3C64E2561FEFF65B0093F0B2 /* Database.xcdatamodeld */,
 			);
 			path = "Favourite Places";
 			sourceTree = "<group>";
@@ -136,7 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD43E1C1FEBDC940098269A /* ViewController.swift in Sources */,
+				3C847A411FEEE7E000A7BF29 /* RoundedUIViewFrames.swift in Sources */,
+				3C847A3C1FEE837300A7BF29 /* PlacesCollectionViewCell.swift in Sources */,
+				3C64E2591FEFF9980093F0B2 /* Database.xcdatamodeld in Sources */,
+				3C847A391FED9A5800A7BF29 /* PlaceModel.swift in Sources */,
+				3C847A431FEEFF1600A7BF29 /* PlaceViewController.swift in Sources */,
+				3C847A361FED971200A7BF29 /* PlacesCollectionViewController.swift in Sources */,
+				3C847A3E1FEEAC0500A7BF29 /* AddNewPlaceViewController.swift in Sources */,
 				FAD43E1A1FEBDC940098269A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C64E2561FEFF65B0093F0B2 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C64E2571FEFF65B0093F0B2 /* Database.xcdatamodel */,
+			);
+			currentVersion = 3C64E2571FEFF65B0093F0B2 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FAD43E0E1FEBDC940098269A /* Project object */;
 }
